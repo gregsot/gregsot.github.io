@@ -1,0 +1,58 @@
+<!doctype html>
+<title>.IO Games — GregSot Hub</title>
+<meta name="description" content="Γρήγορα multiplayer παιχνίδια με απλούς κανόνες και ανταγωνισμό σε real‑time. Άμεση είσοδος στον αγώνα, χωρίς downloads." />
+<link rel="icon" href="favicon.ico" />
+<link rel="canonical" href="./io.html" />
+<style>
+:root{ --bg:#0b1220; --text:#e7edf7; --muted:#b6c3e1; --card:#111a33; --line:#223059; --accent:#8bb1ff; }
+@media (prefers-color-scheme: light){ :root{ --bg:#f7f9fc; --text:#0d1b2a; --muted:#334155; --card:#ffffff; --line:#d9e0ee; --accent:#2b6cb0; } }
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:900px;margin:24px auto;padding:0 16px}
+.hero{height:220px;border-radius:16px;border:1px solid var(--line);background:#000 center/cover no-repeat;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+a.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none}
+a.btn:hover{border-color:var(--accent)}
+a{color:var(--accent)}
+.back{margin-top:14px}
+</style>
+</head>
+<body>
+<main>
+<div class="hero" id="hero-io" role="img" aria-label=".IO Games — εικόνα"></div>
+<h1 style="margin:.2em 0 .4em">.IO Games</h1>
+<div class="card">
+<p>
+Τα .IO παιχνίδια είναι ιδανικά για γρήγορη, ανταγωνιστική δράση. Με απλούς κανόνες και άμεση είσοδο, μπορείς να
+δοκιμάσεις διαφορετικούς ρόλους και τακτικές σε real‑time αγώνες με άλλους παίκτες. Η σελίδα οργανώνει τις
+επιλογές με βάση την ένταση, την πολυπλοκότητα και την καταλληλότητα για κινητό, ώστε να βρίσκεις εύκολα τι
+ταιριάζει στη διάθεση και τον χρόνο σου. Χωρίς downloads ή σύνθετα μενού, μπαίνεις στον αγώνα, μαθαίνεις γρήγορα
+τα βασικά και προσπαθείς να ανέβεις στην κατάταξη βελτιώνοντας μεθοδικά τις επιδόσεις σου.
+</p>
+<a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/io-games-online-browser-games.html">Μετάβαση στη hub page →</a>
+</div>
+<p class="back"><a href="./">« Επιστροφή στην αρχική</a></p>
+</main>
+<script>
+(function(){
+const blog = 'https://paixnidiaonlinexl.blogspot.com';
+const heroEl = document.getElementById('hero-io');
+function cbName(){ return 'cb_' + Math.random().toString(36).slice(2); }
+function bigger(u){ if(!u) return ''; if(u.includes('/s72-')) return u.replace(/\/s72[^\/]*/, '/s800'); if(u.includes('/w72-')) return u.replace(/\/w72[^-]*/, '/w800'); return u; }
+const cb = cbName();
+window[cb] = function(d){ try{
+const arr = (d && d.feed && d.feed.entry) ? d.feed.entry : [];
+for(const e of arr){
+const t = e['media$thumbnail'] && e['media$thumbnail'].url;
+const m = ((e.content||{}).$t||'').match(/<img[^>]+src=\"([^\"]+)/i);
+const src = bigger(t) || (m && m[1]) || '';
+if(src){ heroEl.style.backgroundImage = 'url('+src+')'; break; }
+}
+}catch(_){} finally{ delete window[cb]; s.remove(); } };
+const s = document.createElement('script');
+s.src = blog + '/feeds/posts/summary?alt=json-in-script&max-results=20&callback=' + cb;
+document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>

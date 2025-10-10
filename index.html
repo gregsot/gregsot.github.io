@@ -16,21 +16,6 @@
   <meta property="og:image" content="https://gregsot.github.io/cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "GregSot Hub",
-    "url": "https://gregsot.github.io/",
-    "logo": "https://gregsot.github.io/logo.png",
-    "sameAs": [
-      "https://posftiaxnoblog.blogspot.com/",
-      "https://paixnidiaonlinexl.blogspot.com/"
-    ]
-  }
-  </script>
-
   <style>
     :root{ --bg:#0b1220; --text:#e7edf7; --muted:#b6c3e1; --card:#111a33; --line:#223059; --accent:#8bb1ff; }
     @media (prefers-color-scheme: light){ :root{ --bg:#f7f9fc; --text:#0d1b2a; --muted:#334155; --card:#ffffff; --line:#d9e0ee; --accent:#2b6cb0; } }
@@ -52,80 +37,63 @@
     a.inline:hover{text-decoration:underline}
     footer{padding:26px 16px; text-align:center; opacity:.8}
     .note{font-size:14px; color:var(--muted); margin-top:6px}
-    .topbar{display:flex; justify-content:center; gap:10px; align-items:center; margin-top:12px}
-    .topbar input{width:320px; max-width:60vw; padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text)}
-    .topbar button{padding:10px 14px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text); cursor:pointer}
-
-    /* Modal */
-    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.55); z-index:50}
-    .modal.open{display:flex}
-    .modal-card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; max-width:720px; width:min(92vw, 720px)}
-    .modal-card h3{margin:.2em 0 .4em; font-size:22px}
-    .modal-card p{margin:.5em 0}
-    .modal-actions{display:flex; gap:8px; margin-top:10px}
-    .title-link{color:var(--text); text-decoration:none}
-    .title-link:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
     <h1>GregSot Hub</h1>
-    <p class="lead">Όλα τα blogs, εργαλεία και σελίδες μου σε ένα σημείο. Δες τις κεντρικές κατηγορίες (κάθε μια με εικόνα). Κάνε κλικ στον τίτλο για να διαβάσεις περιγραφή ~150 λέξεων και πάτα το κουμπί για να πας στην hub page στο Blogger.</p>
-    <div class="topbar">
-      <input id="filter" type="search" placeholder="Γρήγορο φιλτράρισμα hubs…" aria-label="Αναζήτηση" />
-      <button id="clearBtn" type="button" title="Καθαρισμός">Καθάρισε</button>
-    </div>
+    <p class="lead">Όλα τα blogs, εργαλεία και σελίδες μου σε ένα σημείο. Κάθε hub έχει εικόνα, τίτλο που ανοίγει **εσωτερική σελίδα περιγραφής (~150 λέξεις)**, και κουμπί που οδηγεί στη **hub page** στο Blogger.</p>
   </header>
 
   <main class="wrap">
-    <!-- ΜΟΝΗ ενότητα Hubs: κάρτες με αυτόματη εικόνα, τίτλο (ανοίγει modal περιγραφής) και κουμπί προς την hub page -->
+    <!-- ΜΟΝΟ η ενότητα Hubs, χωρίς sidebars -->
     <section class="grid" id="hubs" aria-label="Hubs">
       <!-- GAMES HUBS -->
       <article class="card" data-tags="games αγόρια action arcade">
-        <img class="thumb" id="thumb-agoria" src="https://via.placeholder.com/640x360?text=Agoria+Games" alt="Παιχνίδια για Αγόρια" />
-        <h3><a href="#" class="title-link" data-modal="modal-agoria">Παιχνίδια για Αγόρια</a></h3>
+        <a href="agoria.html"><img class="thumb" id="thumb-agoria" src="https://via.placeholder.com/640x360?text=Agoria+Games" alt="Παιχνίδια για Αγόρια" /></a>
+        <h3><a href="agoria.html">Παιχνίδια για Αγόρια</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/online-paixnidia-agoria.html">Άνοιγμα κατηγορίας</a>
       </article>
       <article class="card" data-tags="games κορίτσια casual makeover">
-        <img class="thumb" id="thumb-koritsia" src="https://via.placeholder.com/640x360?text=Koritsia+Games" alt="Παιχνίδια για Κορίτσια" />
-        <h3><a href="#" class="title-link" data-modal="modal-koritsia">Παιχνίδια για Κορίτσια</a></h3>
+        <a href="koritsia.html"><img class="thumb" id="thumb-koritsia" src="https://via.placeholder.com/640x360?text=Koritsia+Games" alt="Παιχνίδια για Κορίτσια" /></a>
+        <h3><a href="koritsia.html">Παιχνίδια για Κορίτσια</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/paixnidia-koritsia.html">Άνοιγμα κατηγορίας</a>
       </article>
       <article class="card" data-tags="games πολεμικά shooting battle">
-        <img class="thumb" id="thumb-polemika" src="https://via.placeholder.com/640x360?text=Polemic+Games" alt="Πολεμικά Παιχνίδια" />
-        <h3><a href="#" class="title-link" data-modal="modal-polemika">Πολεμικά Παιχνίδια</a></h3>
+        <a href="polemika.html"><img class="thumb" id="thumb-polemika" src="https://via.placeholder.com/640x360?text=Polemic+Games" alt="Πολεμικά Παιχνίδια" /></a>
+        <h3><a href="polemika.html">Πολεμικά Παιχνίδια</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/online-paixnidia-polemika.html">Άνοιγμα κατηγορίας</a>
       </article>
       <article class="card" data-tags="games οδήγησης αγώνες racing">
-        <img class="thumb" id="thumb-driving" src="https://via.placeholder.com/640x360?text=Driving+Games" alt="Παιχνίδια Οδήγησης & Αγώνες" />
-        <h3><a href="#" class="title-link" data-modal="modal-driving">Οδήγηση & Αγώνες</a></h3>
+        <a href="driving.html"><img class="thumb" id="thumb-driving" src="https://via.placeholder.com/640x360?text=Driving+Games" alt="Παιχνίδια Οδήγησης & Αγώνες" /></a>
+        <h3><a href="driving.html">Οδήγηση & Αγώνες</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/paixnidia-odigisis-online-agones.html">Άνοιγμα κατηγορίας</a>
       </article>
       <article class="card" data-tags="games puzzle λογική">
-        <img class="thumb" id="thumb-puzzle" src="https://via.placeholder.com/640x360?text=Puzzle+Games" alt="Puzzle Games" />
-        <h3><a href="#" class="title-link" data-modal="modal-puzzle">Puzzle Games</a></h3>
+        <a href="puzzle.html"><img class="thumb" id="thumb-puzzle" src="https://via.placeholder.com/640x360?text=Puzzle+Games" alt="Puzzle Games" /></a>
+        <h3><a href="puzzle.html">Puzzle Games</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/puzzle-games-online-browser.html">Άνοιγμα κατηγορίας</a>
       </article>
       <article class="card" data-tags="games io multiplayer">
-        <img class="thumb" id="thumb-io" src="https://via.placeholder.com/640x360?text=IO+Games" alt=".IO Games" />
-        <h3><a href="#" class="title-link" data-modal="modal-io">.IO Games</a></h3>
+        <a href="io.html"><img class="thumb" id="thumb-io" src="https://via.placeholder.com/640x360?text=IO+Games" alt=".IO Games" /></a>
+        <h3><a href="io.html">.IO Games</a></h3>
         <a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/io-games-online-browser-games.html">Άνοιγμα κατηγορίας</a>
       </article>
 
       <!-- BLOGGER TIPS HUBS -->
       <article class="card" data-tags="blog blogger διαμόρφωση seo layout">
-        <img class="thumb" id="thumb-diamorfosi" src="https://via.placeholder.com/640x360?text=Diamorfosi+Blog" alt="Διαμόρφωση Blog" />
-        <h3><a href="#" class="title-link" data-modal="modal-diamorfosi">Διαμόρφωση Blog</a></h3>
+        <a href="diamorfosi.html"><img class="thumb" id="thumb-diamorfosi" src="https://via.placeholder.com/640x360?text=Diamorfosi+Blog" alt="Διαμόρφωση Blog" /></a>
+        <h3><a href="diamorfosi.html">Διαμόρφωση Blog</a></h3>
         <a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/diamorfosh-blog.html">Άνοιγμα οδηγού</a>
       </article>
       <article class="card" data-tags="blog blogger δωρεάν προγράμματα software">
-        <img class="thumb" id="thumb-programmata" src="https://via.placeholder.com/640x360?text=Dorean+Programmata" alt="Δωρεάν Προγράμματα" />
-        <h3><a href="#" class="title-link" data-modal="modal-programmata">Δωρεάν Προγράμματα</a></h3>
+        <a href="programmata.html"><img class="thumb" id="thumb-programmata" src="https://via.placeholder.com/640x360?text=Dorean+Programmata" alt="Δωρεάν Προγράμματα" /></a>
+        <h3><a href="programmata.html">Δωρεάν Προγράμματα</a></h3>
         <a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/dorean-programmata.html">Άνοιγμα λίστας</a>
       </article>
       <article class="card" data-tags="blog blogger online εργαλεία tools">
-        <img class="thumb" id="thumb-tools" src="https://via.placeholder.com/640x360?text=Online+Tools" alt="Δωρεάν Online Εφαρμογές & Εργαλεία" />
-        <h3><a href="#" class="title-link" data-modal="modal-tools">Δωρεάν Online Εφαρμογές & Εργαλεία</a></h3>
+        <a href="tools.html"><img class="thumb" id="thumb-tools" src="https://via.placeholder.com/640x360?text=Online+Tools" alt="Δωρεάν Online Εφαρμογές & Εργαλεία" /></a>
+        <h3><a href="tools.html">Δωρεάν Online Εφαρμογές & Εργαλεία</a></h3>
         <a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/dorean-online-efarmoges-ergaleia.html">Άνοιγμα σελίδας</a>
       </article>
     </section>
@@ -153,57 +121,15 @@
 
   <footer>© <span id="y"></span> GregSot Hub</footer>
 
-  <!-- Modals: Περιγραφές ~150 λέξεων + CTA προς hub page -->
-  <div class="modal" id="modal-agoria"><div class="modal-card"><h3>Παιχνίδια για Αγόρια</h3><p>Αν ψάχνεις γρήγορη δράση χωρίς εγκατάσταση, η συλλογή «Παιχνίδια για Αγόρια» συγκεντρώνει τίτλους που παίζουν άμεσα στον browser και καλύπτουν από κλασικά arcade μέχρι σύγχρονα action. Εδώ θα βρεις shooting, platform και αγώνες με απλά χειριστήρια, καθαρή εικόνα και σύντομα επίπεδα, ώστε να μπαίνεις-παίζεις χωρίς αναμονές. Η σελίδα οργανώνει τα παιχνίδια σε κατηγορίες ώστε να βρίσκεις γρήγορα αυτό που σου ταιριάζει: περιπέτεια, μάχες, αθλητικά, οδήγηση κ.ά. Περιλαμβάνονται επίσης βασικά tips για χειρισμό και δυσκολία, καθώς και προτάσεις για «πρώτες επιλογές» αν είσαι αρχάριος. Ιδανικό για σύντομα session, αλλά κι αν θες να δοκιμάσεις περισσότερα modes, θα βρεις επιλογές για μεγαλύτερη πρόκληση. Άνοιξέ την, διάλεξε παιχνίδι και ξεκίνα.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/online-paixnidia-agoria.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-koritsia"><div class="modal-card"><h3>Παιχνίδια για Κορίτσια</h3><p>Μια επιμελημένη συλλογή από παιχνίδια που δίνουν έμφαση στη δημιουργικότητα και τη χαλαρή διασκέδαση. Θα βρεις makeover και dress‑up, διακόσμηση, μαγειρική αλλά και casual challenges ιδανικά για μικρές ηλικίες ή για όσους θέλουν να παίξουν κάτι σύντομο και ευχάριστο. Τα παιχνίδια παίζουν απευθείας στον browser, με απλά controls και καθαρά γραφικά ώστε να ξεκινάς αμέσως χωρίς εγκαταστάσεις. Επιπλέον, η σελίδα προτείνει νέες ιδέες και κατηγορίες για να ανακαλύπτεις γρήγορα τι ταιριάζει στη διάθεσή σου — από πιο δημιουργικά μέχρι πιο παιχνιδιάρικα θέματα. Με λίγα κλικ μπορείς να μπεις, να δοκιμάσεις και να συνεχίσεις αργότερα από όπου σταμάτησες.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/paixnidia-koritsia.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-polemika"><div class="modal-card"><h3>Πολεμικά Παιχνίδια</h3><p>Για όσους θέλουν ένταση και ρυθμό, η ενότητα «Πολεμικά Παιχνίδια» συγκεντρώνει FPS/TPS τίτλους, arena battles και αποστολές επιβίωσης που τρέχουν άμεσα στον browser. Εδώ η δράση είναι στο επίκεντρο: επιλέγεις εξοπλισμό, ρυθμίζεις δυσκολία, και ξεκινάς μάχες γρήγορα χωρίς μεγάλες οθόνες φόρτωσης. Θα βρεις προτάσεις με καλύτερο χειρισμό σε desktop ή κινητό, καθώς και σύντομες περιγραφές για το τι να περιμένεις από κάθε κατηγορία — ρεαλισμό, arcade αίσθηση, ή tactical προσέγγιση. Οι προτεινόμενες επιλογές ανανεώνονται και καλύπτουν διαφορετικά επίπεδα εμπειρίας, ώστε να έχεις πάντα κάτι νέο να δοκιμάσεις.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/online-paixnidia-polemika.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-driving"><div class="modal-card"><h3>Οδήγηση & Αγώνες</h3><p>Αν σου αρέσουν τα γρήγορα reflex και οι καθαρές γραμμές στην οδήγηση, εδώ θα βρεις συλλογή από racing, drift, parking και drag παιχνίδια που παίζουν χωρίς εγκατάσταση στον browser. Από πίστες πόλης μέχρι off‑road διαδρομές με εμπόδια, οι επιλογές καλύπτουν τόσο χαλαρό παιχνίδι όσο και απαιτητικές προκλήσεις. Θα δεις ποια είναι πιο φιλικά σε κινητό, ποια προσφέρουν ρεαλισμό στο χειρισμό και ποια στοχεύουν σε πιο arcade διασκέδαση. Με μικρά sessions μπορείς να παίζεις όποτε θες και να δοκιμάζεις διαφορετικά modes για να βελτιώνεις τον χρόνο ή την τεχνική σου.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/paixnidia-odigisis-online-agones.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-puzzle"><div class="modal-card"><h3>Puzzle Games</h3><p>Σπαζοκεφαλιές κάθε τύπου: matching, λογικής, φυσικής αλλά και λέξεων, για να «δουλεύει» το μυαλό ενώ χαλαρώνεις. Η σελίδα συγκεντρώνει εύκολες επιλογές για αρχάριους αλλά και πιο απαιτητικά επίπεδα για όσους θέλουν πρόκληση. Τα παιχνίδια τρέχουν απευθείας στον browser και τα περισσότερα έχουν σύντομα rounds ώστε να παίζεις όποτε έχεις λίγο χρόνο. Θα βρεις επίσης προτάσεις που επικεντρώνονται στη στρατηγική, στην ακρίβεια κινήσεων ή στην ταχύτητα σκέψης, για να επιλέγεις ανάλογα με τη διάθεση και τον χρόνο σου.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/puzzle-games-online-browser.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-io"><div class="modal-card"><h3>.IO Games</h3><p>Τα .IO παιχνίδια είναι ιδανικά για γρήγορη ανταγωνιστική δράση. Με απλούς κανόνες και άμεση είσοδο στο παιχνίδι, μπορείς να δοκιμάσεις διαφορετικούς ρόλους και τακτικές σε real‑time αγώνες με άλλους παίκτες. Το hub οργανώνει τις επιλογές ανά είδος και δυσκολία, ώστε να βρίσκεις εύκολα αυτό που σου ταιριάζει. Χωρίς downloads ή σύνθετα μενού, μπαίνεις κατευθείαν στον αγώνα και προσπαθείς να ανέβεις στον πίνακα κατάταξης βελτιώνοντας σταθερά τις επιδόσεις σου.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/io-games-online-browser-games.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-diamorfosi"><div class="modal-card"><h3>Διαμόρφωση Blog</h3><p>Ένας πρακτικός οδηγός για να δώσεις επαγγελματική μορφή στο blog σου χωρίς να χαλάσει η ταχύτητα. Θα δεις πώς να οργανώσεις σωστά τη δομή (header, menu, content, footer), πώς να χρησιμοποιήσεις breadcrumbs και hub pages για καθαρή πλοήγηση, και ποια widgets αξίζουν να κρατήσεις. Περιλαμβάνονται tips για εικόνες και scripts ώστε να φορτώνουν ελαφριά, καθώς και μικρό checklist για να βεβαιωθείς ότι όλα είναι στη θέση τους. Ιδανικό για αρχάριους αλλά και για όσους θέλουν να «καθαρίσουν» ένα υπάρχον template.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/diamorfosh-blog.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-programmata"><div class="modal-card"><h3>Δωρεάν Προγράμματα</h3><p>Επιλεγμένες δωρεάν εφαρμογές για καθημερινές ανάγκες: επεξεργασία εικόνας και video, ασφάλεια, παραγωγικότητα, backup κ.ά. Η σελίδα συγκεντρώνει αξιόπιστες λύσεις με σύντομες σημειώσεις χρήσης και κριτήρια επιλογής, ώστε να μην χάνεις χρόνο σε δοκιμές. Θα βρεις προγράμματα που λειτουργούν καλά σε παλιούς και νέους υπολογιστές, αλλά και ιδέες για εναλλακτικές αν χρειαστεί.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/dorean-programmata.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-  <div class="modal" id="modal-tools"><div class="modal-card"><h3>Δωρεάν Online Εφαρμογές & Εργαλεία</h3><p>Web εφαρμογές που τρέχουν απευθείας στον browser και λύνουν πρακτικά προβλήματα: μετρητής λέξεων, image compressor, online photo editor, schema generator και πολλά ακόμη. Χωρίς εγκατάσταση, ανοίγεις, δουλεύεις και τελειώνεις. Η σελίδα οργανώνει τα εργαλεία σε κατηγορίες και προτείνει δημοφιλείς επιλογές ώστε να βρίσκεις γρήγορα αυτό που χρειάζεσαι. Ιδανικό για γρήγορες δουλειές ή για χρήστες που θέλουν ελαφριές λύσεις.</p><div class="modal-actions"><a class="btn" rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/dorean-online-efarmoges-ergaleia.html">Μετάβαση στη hub page →</a><button class="btn" data-close>Κλείσιμο</button></div></div></div>
-
   <script>
     // Έτος footer
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Φίλτρο hubs
-    const filter = document.getElementById('filter');
-    const clearBtn = document.getElementById('clearBtn');
-    const hubCards = Array.from(document.querySelectorAll('#hubs .card'));
-    function applyFilter(q){
-      const term = q.trim().toLowerCase();
-      hubCards.forEach(c => {
-        const text = (c.textContent + ' ' + (c.getAttribute('data-tags')||'')).toLowerCase();
-        c.style.display = !term || text.includes(term) ? '' : 'none';
-      });
-    }
-    filter.addEventListener('input', e => applyFilter(e.target.value));
-    clearBtn.addEventListener('click', () => { filter.value=''; applyFilter(''); filter.focus(); });
-
-    // Modals open/close
-    document.querySelectorAll('.title-link').forEach(a => a.addEventListener('click', e => {
-      e.preventDefault();
-      const id = a.getAttribute('data-modal');
-      const m = document.getElementById(id);
-      if(m) m.classList.add('open');
-    }));
-    document.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', () => {
-      const m = btn.closest('.modal');
-      if(m) m.classList.remove('open');
-    }));
-    document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => {
-      if(e.target === m) m.classList.remove('open');
-    }));
   </script>
 
-  <!-- Randomizer + Auto-thumbs (fixed URL parsing) -->
+  <!-- Auto-thumbs + Random (URL-safe) -->
   <script>
     function loadBloggerFeed(blogUrl, max, callback){
-      // Guard: ensure valid absolute URL without stray spaces
-      if(typeof blogUrl !== 'string') return;
-      blogUrl = blogUrl.trim();
+      if(typeof blogUrl !== 'string') return; blogUrl = blogUrl.trim();
       try { new URL(blogUrl); } catch(e){ console.error('Invalid blogUrl', blogUrl); return; }
       const cbName = 'cb_' + Math.random().toString(36).slice(2);
       const s = document.createElement('script');
@@ -217,7 +143,6 @@
       return arr.map(e => ({
         title: (e.title && e.title.$t) || 'Untitled',
         link: (e.link && Array.isArray(e.link) ? (e.link.find(l => l.rel === 'alternate')||{}).href : (e.link && e.link.href)) || '#',
-        published: (e.published && e.published.$t) || '',
         thumb: (e['media$thumbnail'] && e['media$thumbnail'].url) || '',
         content: e.content
       }));
@@ -233,8 +158,7 @@
     function setThumbsFrom(entries, mapping){
       const pool = entries.filter(e => e.thumb || /<img/i.test(((e.content||{}).$t||''))).sort(() => Math.random()-0.5);
       Object.entries(mapping).forEach(([id, fallback]) => {
-        const el = document.getElementById(id);
-        if(!el) return;
+        const el = document.getElementById(id); if(!el) return;
         const pick = pool.pop() || null;
         let src = pick && (biggerThumb(pick.thumb) || ((((pick.content||{}).$t||'').match(/<img[^>]+src=\"([^\"]+)/i) || [])[1] || ''));
         el.src = src || fallback;
@@ -251,21 +175,17 @@
       if(it.link && typeof it.link.href === 'string') return it.link.href;
       return '#';
     }
-
     function getTitleText(it){
       if(it && typeof it.title === 'string') return it.title;
       if(it && it.title && typeof it.title.$t === 'string') return it.title.$t;
       return 'Untitled';
     }
-
     function safeHostname(u){
       try{ return new URL(u, location.origin).hostname.replace('www.',''); }catch(e){ return ''; }
     }
 
-    // Random posts 12 + 12 (no invalid URL usage)
     function renderRandom(containerId, rawItems, count){
-      const grid = document.getElementById(containerId);
-      if(!grid) return;
+      const grid = document.getElementById(containerId); if(!grid) return;
       const items = (rawItems || []).slice().sort(() => Math.random()-0.5).slice(0, count);
       grid.innerHTML = items.map(it => {
         const href = getAltLink(it);
@@ -279,7 +199,7 @@
       }).join('');
     }
 
-    // Games: auto thumbs + random
+    // Auto-thumbs
     loadBloggerFeed('https://paixnidiaonlinexl.blogspot.com', 60, d => {
       const entries = extractEntries(d);
       setThumbsFrom(entries, {
@@ -291,8 +211,6 @@
         'thumb-io': 'https://via.placeholder.com/640x360?text=IO+Games'
       });
     });
-
-    // Blogger tips: auto thumbs
     loadBloggerFeed('https://posftiaxnoblog.blogspot.com', 60, d => {
       const entries = extractEntries(d);
       setThumbsFrom(entries, {
@@ -302,7 +220,7 @@
       });
     });
 
-    // Random posts (12 + 12) using safe URL derivation
+    // Random posts (12 + 12)
     loadBloggerFeed('https://paixnidiaonlinexl.blogspot.com', 40, d => {
       renderRandom('rand-games', (d && d.feed && d.feed.entry) || [], 12);
     });
@@ -310,29 +228,16 @@
       renderRandom('rand-pos', (d && d.feed && d.feed.entry) || [], 12);
     });
 
-    // -----------------------
-    // Test mode (?test=1)
-    // -----------------------
+    // Tests (manual): open with ?test=1 for console checks
     (function(){
-      const qs = new URLSearchParams(location.search);
-      if(qs.get('test') !== '1') return;
-      console.log('[TEST] starting');
-      // 1) getAltLink variations
-      const t1 = getAltLink({ link: 'https://example.com/a' }) === 'https://example.com/a';
-      const t2 = getAltLink({ link: [{rel:'alternate', href:'https://example.com/b'}] }) === 'https://example.com/b';
-      const t3 = getAltLink({ link: [{rel:'self', href:'https://example.com/self'}] }) === '#';
-      const t4 = getAltLink({ }) === '#';
-      console.assert(t1 && t2 && t3 && t4, 'getAltLink tests failed');
-
-      // 2) renderRandom should not throw with bad links
-      const bad = [{ title:{ $t:'No link' } }, { title:{ $t:'Alt only' }, link:[{rel:'self',href:'x'}] }];
-      const tmp = document.createElement('div'); tmp.id = 'rand-test'; document.body.appendChild(tmp);
-      try{ renderRandom('rand-test', bad, 2); console.log('[TEST] renderRandom ok'); }
-      catch(e){ console.error('[TEST] renderRandom threw', e); }
-
-      // 3) loadBloggerFeed guard
-      try{ loadBloggerFeed('   https://example.com  ', 1, ()=>{}); console.log('[TEST] loadBloggerFeed trim ok'); }catch(e){ console.error('[TEST] loadBloggerFeed trim fail', e); }
-      try{ loadBloggerFeed('not a url', 1, ()=>{}); console.log('[TEST] loadBloggerFeed invalid url guarded'); }catch(e){ console.error('[TEST] invalid url not guarded'); }
+      const qs = new URLSearchParams(location.search); if(qs.get('test')!=='1') return;
+      console.log('[TEST] start');
+      console.assert(getAltLink({ link:'https://x.com'})==='https://x.com','link string');
+      console.assert(getAltLink({ link:[{rel:'alternate',href:'https://y.com'}]})==='https://y.com','link array alt');
+      console.assert(getAltLink({ link:[{rel:'self',href:'https://z.com'}]})==='#','no alt');
+      console.assert(getTitleText({ title:'A' })==='A','title string');
+      console.assert(getTitleText({ title:{ $t:'B'}})==='B','title $t');
+      console.log('[TEST] ok');
     })();
   </script>
 

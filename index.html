@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GregSot Hub — Κεντρική Σελίδα</title>
+  <meta name="description" content="Κεντρικό hub με links προς τα blogs και τις σελίδες μου. Εργαλεία, οδηγούς και χρήσιμα άρθρα — όλα σε ένα μέρος." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="canonical" href="https://gregsot.github.io/" />
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GregSot Hub — Κεντρική Σελίδα" />
+  <meta property="og:description" content="Κεντρικό hub με links προς τα blogs και τις σελίδες μου." />
+  <meta property="og:url" content="https://gregsot.github.io/" />
+  <meta property="og:image" content="https://gregsot.github.io/cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GregSot Hub",
+    "url": "https://gregsot.github.io/",
+    "logo": "https://gregsot.github.io/logo.png",
+    "sameAs": [
+      "https://basketbettingtips.blogspot.com/",
+      "https://posftiaxnoblog.blogspot.com/",
+      "https://paixnidiaonlinexl.blogspot.com/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220; --text:#e7edf7; --muted:#b6c3e1; --card:#111a33; --line:#223059; --accent:#8bb1ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f9fc; --text:#0d1b2a; --muted:#334155; --card:#ffffff; --line:#d9e0ee; --accent:#2b6cb0; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text)}
+    header{padding:36px 16px; text-align:center}
+    h1{margin:.1em 0 .2em; font-size:clamp(28px, 4vw, 40px)}
+    p.lead{max-width:900px; margin:8px auto 0; opacity:.9}
+    .wrap{max-width:1120px; margin:0 auto; padding:0 16px 24px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:16px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; transition:transform .15s ease, box-shadow .15s ease}
+    .card:hover{transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.15)}
+    .card h3{margin:.2em 0 .4em; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+    .links{margin-top:10px}
+    .links a{display:block; padding:8px 10px; margin:6px 0; border:1px solid var(--line); border-radius:10px; text-decoration:none; color:var(--text)}
+    .links a:hover{border-color:var(--accent); outline:none}
+    a.inline{color:var(--accent); text-decoration:none}
+    a.inline:hover{text-decoration:underline}
+    footer{padding:26px 16px; text-align:center; opacity:.8}
+    .note{font-size:14px; color:var(--muted); margin-top:6px}
+    .topbar{display:flex; justify-content:center; gap:10px; align-items:center; margin-top:12px}
+    .topbar input{width:320px; max-width:60vw; padding:10px 12px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text)}
+    .topbar button{padding:10px 14px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text); cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GregSot Hub</h1>
+    <p class="lead">Όλα τα blogs, εργαλεία και σελίδες μου σε ένα σημείο. Μπες κατευθείαν εκεί που σε ενδιαφέρει — χωρίς χάσιμο χρόνου.</p>
+    <div class="topbar">
+      <!-- Προαιρετική μίνι αναζήτηση (client-side filter) -->
+      <input id="filter" type="search" placeholder="Γρήγορο φιλτράρισμα links…" aria-label="Αναζήτηση" />
+      <button id="clearBtn" type="button" title="Καθαρισμός">Καθάρισε</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- ΚΑΤΗΓΟΡΙΕΣ / ΕΝΟΤΗΤΕΣ  -->
+    <section class="grid" id="cards">
+      <!-- 1. Blog Hub (Blogger) -->
+      <article class="card" data-tags="blog blogger basket betting tips over under">
+        <h3>Blog #1 — Basket Betting Tips</h3>
+        <p>Προγνωστικά, αναλύσεις και εργαλεία για αγώνες μπάσκετ.</p>
+        <div class="links">
+          <a rel="noopener" href="https://basketbettingtips.blogspot.com/?utm_source=hub&utm_medium=gh-pages&utm_campaign=home">Αρχική σελίδα (Blogger)</a>
+          <a rel="noopener" href="https://basketbettingtips.blogspot.com/p/dorean-online-efarmoges-ergaleia.html?utm_source=hub&utm_medium=gh-pages&utm_campaign=tools">Σελίδα: Δωρεάν Εργαλεία</a>
+          <a rel="noopener" href="https://basketbettingtips.blogspot.com/p/basket-over-under-tools.html?utm_source=hub&utm_medium=gh-pages&utm_campaign=hub">Hub: Over/Under Tools</a>
+        </div>
+      </article>
+
+      <!-- 2. Tech / Blogger Tips -->
+      <article class="card" data-tags="blog blogger tips seo widgets code tools">
+        <h3>Blog #2 — Blogger Tips & Tools</h3>
+        <p>Οδηγοί για Blogger/SEO, έτοιμα widgets και γεννήτριες κώδικα.</p>
+        <div class="links">
+          <a rel="noopener" href="https://posftiaxnoblog.blogspot.com/?utm_source=hub&utm_medium=gh-pages&utm_campaign=home">Αρχική (Blogger)</a>
+          <a rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/dorean-online-efarmoges-ergaleia.html?utm_source=hub&utm_medium=gh-pages&utm_campaign=tools">Σελίδα: Online Εργαλεία</a>
+          <a rel="noopener" href="https://posftiaxnoblog.blogspot.com/p/schema-generator.html?utm_source=hub&utm_medium=gh-pages&utm_campaign=schema">Schema Generator</a>
+        </div>
+      </article>
+
+      <!-- 3. Games Portal -->
+      <article class="card" data-tags="games portal online παιχνίδια car girls boys puzzle html5">
+        <h3>Blog #3 — Online Games</h3>
+        <p>Παίξε δωρεάν online παιχνίδια (HTML5). Κατηγορίες, tags και οδηγοί.</p>
+        <div class="links">
+          <a rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/?utm_source=hub&utm_medium=gh-pages&utm_campaign=home">Αρχική (Blogger)</a>
+          <a rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/search/label/paixnidia-agoria?utm_source=hub&utm_medium=gh-pages&utm_campaign=labels">Παιχνίδια για Αγόρια (Label)</a>
+          <a rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/search/label/puzzle?utm_source=hub&utm_medium=gh-pages&utm_campaign=labels">Puzzle (Label)</a>
+        </div>
+      </article>
+
+      <!-- 4. Social / Profiles (παράδειγμα) -->
+      <article class="card" data-tags="social pinterest youtube github">
+        <h3>Social & Profiles</h3>
+        <p>Ακολούθησέ με στα social για νέα, ιδέες και ενημερώσεις.</p>
+        <div class="links">
+          <a rel="noopener" href="https://www.pinterest.com/YourProfile/?utm_source=hub&utm_medium=gh-pages&utm_campaign=social">Pinterest</a>
+          <a rel="noopener" href="https://www.youtube.com/@YourChannel?utm_source=hub&utm_medium=gh-pages&utm_campaign=social">YouTube</a>
+          <a rel="noopener" href="https://github.com/YourUsername?utm_source=hub&utm_medium=gh-pages&utm_campaign=social">GitHub</a>
+        </div>
+      </article>
+
+      <!-- 5. Επικοινωνία / About -->
+      <article class="card" data-tags="contact about email συνεργασίες">
+        <h3>Σχετικά & Επικοινωνία</h3>
+        <p>Ποιος είμαι, τι φτιάχνω και πώς μπορείς να επικοινωνήσεις.</p>
+        <div class="links">
+          <a class="inline" rel="noopener" href="mailto:you@example.com">you@example.com</a>
+          <div class="note">Για συνεργασίες/ιδέες στείλε email.</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> GregSot Hub</footer>
+
+  <script>
+    // Έτος footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Γρήγορο client-side filter για τις κάρτες
+    const filter = document.getElementById('filter');
+    const clearBtn = document.getElementById('clearBtn');
+    const cards = Array.from(document.querySelectorAll('#cards .card'));
+
+    function applyFilter(q){
+      const term = q.trim().toLowerCase();
+      cards.forEach(c => {
+        const text = (c.textContent + ' ' + (c.getAttribute('data-tags')||'')).toLowerCase();
+        c.style.display = !term || text.includes(term) ? '' : 'none';
+      });
+    }
+    filter.addEventListener('input', e => applyFilter(e.target.value));
+    clearBtn.addEventListener('click', () => { filter.value=''; applyFilter(''); filter.focus(); });
+  </script>
+</body>
+</html>

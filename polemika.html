@@ -1,0 +1,48 @@
+<!doctype html>
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+a.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none}
+a.btn:hover{border-color:var(--accent)}
+a{color:var(--accent)}
+.back{margin-top:14px}
+</style>
+</head>
+<body>
+<main>
+<div class="hero" id="hero-polemika" role="img" aria-label="Πολεμικά Παιχνίδια — εικόνα"></div>
+<h1 style="margin:.2em 0 .4em">Πολεμικά Παιχνίδια</h1>
+<div class="card">
+<p>
+Για ένταση και ρυθμό χωρίς downloads, η ενότητα αυτή συγκεντρώνει τίτλους σε πρώτο ή τρίτο πρόσωπο, γρήγορες
+μάχες αρένας και αποστολές επιβίωσης που τρέχουν στον browser. Μπορείς να ρυθμίσεις δυσκολία, να διαλέξεις
+εξοπλισμό και να δοκιμάσεις διαφορετικές τακτικές με ελάχιστο χρόνο αναμονής. Δίνουμε προτεραιότητα σε παιχνίδια
+με καθαρό χειρισμό σε desktop και κινητό, σταθερό frame rate και τίτλους που επιβραβεύουν την πρόοδο. Θα βρεις
+επιλογές με arcade αίσθηση αλλά και πιο «τακτικές» προσεγγίσεις, ώστε να επιλέγεις ανάλογα με τη διάθεση. Το
+περιεχόμενο ανανεώνεται περιοδικά για να υπάρχουν πάντα νέες προτάσεις.
+</p>
+<a class="btn" rel="noopener" href="https://paixnidiaonlinexl.blogspot.com/p/online-paixnidia-polemika.html">Μετάβαση στη hub page →</a>
+</div>
+<p class="back"><a href="./">« Επιστροφή στην αρχική</a></p>
+</main>
+<script>
+(function(){
+const blog = 'https://paixnidiaonlinexl.blogspot.com';
+const heroEl = document.getElementById('hero-polemika');
+function cbName(){ return 'cb_' + Math.random().toString(36).slice(2); }
+function bigger(u){ if(!u) return ''; if(u.includes('/s72-')) return u.replace(/\/s72[^\/]*/, '/s800'); if(u.includes('/w72-')) return u.replace(/\/w72[^-]*/, '/w800'); return u; }
+const cb = cbName();
+window[cb] = function(d){ try{
+const arr = (d && d.feed && d.feed.entry) ? d.feed.entry : [];
+for(const e of arr){
+const t = e['media$thumbnail'] && e['media$thumbnail'].url;
+const m = ((e.content||{}).$t||'').match(/<img[^>]+src=\"([^\"]+)/i);
+const src = bigger(t) || (m && m[1]) || '';
+if(src){ heroEl.style.backgroundImage = 'url('+src+')'; break; }
+}
+}catch(_){} finally{ delete window[cb]; s.remove(); } };
+const s = document.createElement('script');
+s.src = blog + '/feeds/posts/summary?alt=json-in-script&max-results=20&callback=' + cb;
+document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>

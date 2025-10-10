@@ -1,4 +1,19 @@
 <!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Puzzle Games — GregSot Hub</title>
+<meta name="description" content="Σπαζοκεφαλιές για όλα τα επίπεδα: matching, λογική, φυσική και word puzzles. Παίζουν άμεσα στον browser." />
+<link rel="icon" href="favicon.ico" />
+<link rel="canonical" href="./puzzle.html" />
+<style>
+:root{ --bg:#0b1220; --text:#e7edf7; --muted:#b6c3e1; --card:#111a33; --line:#223059; --accent:#8bb1ff; }
+@media (prefers-color-scheme: light){ :root{ --bg:#f7f9fc; --text:#0d1b2a; --muted:#334155; --card:#ffffff; --line:#d9e0ee; --accent:#2b6cb0; } }
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+main{max-width:900px;margin:24px auto;padding:0 16px}
+.hero{height:220px;border-radius:16px;border:1px solid var(--line);background:#000 center/cover no-repeat;margin-bottom:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
 a.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none}
 a.btn:hover{border-color:var(--accent)}
@@ -30,18 +45,4 @@ function cbName(){ return 'cb_' + Math.random().toString(36).slice(2); }
 function bigger(u){ if(!u) return ''; if(u.includes('/s72-')) return u.replace(/\/s72[^\/]*/, '/s800'); if(u.includes('/w72-')) return u.replace(/\/w72[^-]*/, '/w800'); return u; }
 const cb = cbName();
 window[cb] = function(d){ try{
-const arr = (d && d.feed && d.feed.entry) ? d.feed.entry : [];
-for(const e of arr){
-const t = e['media$thumbnail'] && e['media$thumbnail'].url;
-const m = ((e.content||{}).$t||'').match(/<img[^>]+src=\"([^\"]+)/i);
-const src = bigger(t) || (m && m[1]) || '';
-if(src){ heroEl.style.backgroundImage = 'url('+src+')'; break; }
-}
-}catch(_){} finally{ delete window[cb]; s.remove(); } };
-const s = document.createElement('script');
-s.src = blog + '/feeds/posts/summary?alt=json-in-script&max-results=20&callback=' + cb;
-document.head.appendChild(s);
-})();
-</script>
-</body>
 </html>

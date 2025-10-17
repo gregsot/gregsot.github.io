@@ -200,7 +200,7 @@
     }
 
     // Auto-thumbs
-    loadBloggerFeed('https://paixnidiaonlinexl.blogspot.com', 60, d => {
+    loadBloggerFeed('https://paixnidiaonline.com', 60, d => {
       const entries = extractEntries(d);
       setThumbsFrom(entries, {
         'thumb-agoria': 'https://via.placeholder.com/640x360?text=Agoria+Games',
@@ -221,7 +221,7 @@
     });
 
     // Random posts (12 + 12)
-    loadBloggerFeed('https://paixnidiaonlinexl.blogspot.com', 40, d => {
+    loadBloggerFeed('https://paixnidiaonline.com', 40, d => {
       renderRandom('rand-games', (d && d.feed && d.feed.entry) || [], 12);
     });
     loadBloggerFeed('https://posftiaxnoblog.blogspot.com', 40, d => {

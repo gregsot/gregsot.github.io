@@ -8,14 +8,59 @@
 <link rel="icon" href="favicon.ico" />
 <link rel="canonical" href="./puzzle.html" />
 <style>
-:root{ --bg:#0b1220; --text:#e7edf7; --muted:#b6c3e1; --card:#111a33; --line:#223059; --accent:#8bb1ff; }
-@media (prefers-color-scheme: light){ :root{ --bg:#f7f9fc; --text:#0d1b2a; --muted:#334155; --card:#ffffff; --line:#d9e0ee; --accent:#2b6cb0; } }
+:root{
+  --bg:#0b1220;
+  --text:#e7edf7;
+  --muted:#b6c3e1;
+  --card:#111a33;
+  --line:#223059;
+  --accent:#8bb1ff;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f9fc;
+    --text:#0d1b2a;
+    --muted:#334155;
+    --card:#ffffff;
+    --line:#d9e0ee;
+    --accent:#2b6cb0;
+  }
+}
 *{box-sizing:border-box}
-body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-main{max-width:900px;margin:24px auto;padding:0 16px}
-.hero{height:220px;border-radius:16px;border:1px solid var(--line);background:#000 center/cover no-repeat;margin-bottom:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
-a.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);color:var(--text);text-decoration:none}
+body{
+  margin:0;
+  font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+main{
+  max-width:900px;
+  margin:24px auto;
+  padding:0 16px;
+}
+.hero{
+  height:220px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:#000 center/cover no-repeat;
+  margin-bottom:14px;
+  transition:background-image .5s ease;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+a.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  color:var(--text);
+  text-decoration:none;
+}
 a.btn:hover{border-color:var(--accent)}
 a{color:var(--accent)}
 .back{margin-top:14px}
@@ -23,26 +68,58 @@ a{color:var(--accent)}
 </head>
 <body>
 <main>
-<div class="hero" id="hero-puzzle" role="img" aria-label="Puzzle Games — εικόνα"></div>
-<h1 style="margin:.2em 0 .4em">Puzzle Games</h1>
-<div class="card">
-<p>
-Σπαζοκεφαλιές για χαλάρωση ή πρόκληση, με κατηγορίες που καλύπτουν matching, λογική, φυσική και παιχνίδια λέξεων.
-Στόχος είναι να «δουλεύει» το μυαλό με μικρές δόσεις, γι’ αυτό επιλέγουμε τίτλους με γρήγορα επίπεδα και καθαρό
-σχεδιασμό. Θα βρεις ιδέες που εστιάζουν στη στρατηγική, στην ακρίβεια κινήσεων ή στην ταχύτητα σκέψης, ώστε να
-επιλέγεις ανάλογα με τον χρόνο και τη διάθεση. Η σελίδα προτείνει επίσης προοδευτικές δυσκολίες και εναλλακτικές
-αν θέλεις να πας σε κάτι πιο απαιτητικό. Όλα τρέχουν στον browser χωρίς εγκατάσταση.
-</p>
-<a class="btn" rel="noopener" href="https://paixnidiaonline.com/p/puzzle-games-online-browser.html">Μετάβαση στη hub page →</a>
-</div>
-<p class="back"><a href="./">« Επιστροφή στην αρχική</a></p>
+  <div class="hero" id="hero-puzzle" role="img" aria-label="Puzzle Games — εικόνα"></div>
+  <h1 style="margin:.2em 0 .4em">Puzzle Games</h1>
+  <div class="card">
+    <p>
+      Σπαζοκεφαλιές για χαλάρωση ή πρόκληση, με κατηγορίες που καλύπτουν matching, λογική, φυσική και παιχνίδια λέξεων.
+      Στόχος είναι να «δουλεύει» το μυαλό με μικρές δόσεις, γι’ αυτό επιλέγουμε τίτλους με γρήγορα επίπεδα και καθαρό
+      σχεδιασμό. Θα βρεις ιδέες που εστιάζουν στη στρατηγική, στην ακρίβεια κινήσεων ή στην ταχύτητα σκέψης, ώστε να
+      επιλέγεις ανάλογα με τον χρόνο και τη διάθεση. Η σελίδα προτείνει επίσης προοδευτικές δυσκολίες και εναλλακτικές
+      αν θέλεις να πας σε κάτι πιο απαιτητικό. Όλα τρέχουν στον browser χωρίς εγκατάσταση.
+    </p>
+    <a class="btn" rel="noopener" href="https://paixnidiaonline.com/p/puzzle-games-online-browser.html">Μετάβαση στη hub page →</a>
+  </div>
+  <p class="back"><a href="./">« Επιστροφή στην αρχική</a></p>
 </main>
+
 <script>
 (function(){
-const blog = 'https://paixnidiaonline.com';
-const heroEl = document.getElementById('hero-puzzle');
-function cbName(){ return 'cb_' + Math.random().toString(36).slice(2); }
-function bigger(u){ if(!u) return ''; if(u.includes('/s72-')) return u.replace(/\/s72[^\/]*/, '/s800'); if(u.includes('/w72-')) return u.replace(/\/w72[^-]*/, '/w800'); return u; }
-const cb = cbName();
-window[cb] = function(d){ try{
+  const blog = 'https://paixnidiaonline.com';
+  const heroEl = document.getElementById('hero-puzzle');
+
+  function cbName(){ return 'cb_' + Math.random().toString(36).slice(2); }
+  function bigger(u){ 
+    if(!u) return ''; 
+    if(u.includes('/s72-')) return u.replace(/\/s72[^\/]*/, '/s800'); 
+    if(u.includes('/w72-')) return u.replace(/\/w72[^-]*/, '/w800'); 
+    return u; 
+  }
+
+  const cb = cbName();
+  window[cb] = function(d){ 
+    try {
+      const entries = d.feed.entry;
+      if(!entries || !entries.length) return;
+      for (let i=0; i<entries.length; i++) {
+        const e = entries[i];
+        // Ελέγχουμε αν το post έχει label puzzle
+        if (e.category && e.category.some(c => c.term === 'puzzle')) {
+          const media = e.media$thumbnail ? e.media$thumbnail.url : '';
+          if(media){
+            heroEl.style.backgroundImage = `url('${bigger(media)}')`;
+            break;
+          }
+        }
+      }
+    } catch(err){ console.error(err); }
+  }
+
+  const s = document.createElement('script');
+  s.src = `${blog}/feeds/posts/default?alt=json-in-script&callback=${cb}&max-results=10`;
+  document.body.appendChild(s);
+})();
+</script>
+
+</body>
 </html>
